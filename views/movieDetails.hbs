@@ -1,0 +1,43 @@
+
+<div class="container-fluid pl-0 pr-0 ml-0 mr-0" style="background:linear-gradient(90deg,#111d5e, transparent),url({{data.largePosterImg}})  no-repeat right top!important;  ">
+    <div class="d-flex flex-row col-6 mt-5 ">
+        <div class="d-flex flex-column col-4 ml-4 mr-5">
+            <img src={{data.smallPosterImg}} alt="small Poster Image"  width="100%">
+            </div>
+        <div class class="d-flex flex-column col-8">
+        <h4 class="text-light">{{data.title}}</h4>
+
+        <p class="text-light">{{#each data.genre}}{{this}} | {{/each}}{{getRls}}</p>
+        <h6><i class="fas fa-thumbs-up    "></i> {{data.rating}} User Reviews</h6>
+        <p class="text-light">{{data.synopsis}}</p>
+        {{#if data.priceRent}}
+        <a class="btn btn-danger" href="/" style="background-color: #c70039 !important;" role="button">Rent ${{data.priceRent}}</a>
+        {{/if}}
+        {{#if data.priceBuy}}
+        <a class="btn btn-danger ml-2" href="/" style="background-color: #c70039 !important;" role="button">Buy ${{data.priceBuy}}</a>
+        {{/if}}
+</div>
+    </div>
+     <div class="d-flex flex-column col-7 mt-5"></div>
+</div>
+    {{#if sim}}
+<div class="similar mb-5">
+    <h3 class="text-center mt-5 mb-5">You May Also Like</h3>
+    <div class="container d-flex flex-column justify-content-center">
+<div class=" container d-flex flex-row flex-wrap justify-content-between">
+    {{/if}}
+    {{#each sim}}
+
+     <div class="col-2 mt-4 mb-3 d-flex flex-column align-items-center wrapper">
+     <a href="/movieDetails/{{this.id}}"><img src="{{this.smallPosterImg}}">
+     </a>
+
+     <h5 class="mt-2 text-center">{{this.title}}</h5>
+    </div>
+
+    {{/each}}
+   
+
+    </div>
+    </div>
+</div>

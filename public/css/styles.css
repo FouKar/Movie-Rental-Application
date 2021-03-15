@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+body {
+  font-family: sans-serif;
+}
+
+.navbar {
+  background-color: #c70039 !important;
+}
+.nav-item {
+  font-family: "Monoton", cursive;
+  color: #111d5e !important;
+  text-transform: uppercase !important;
+  font-size: large;
+  padding-right: 40px !important;
+}
+.nav-item:hover {
+  transform: scale(1.5) !important;
+}
+.navbar-brand:hover {
+  transform: scale(1.2) !important;
+}
+.footer {
+  background-color: #111d5e !important;
+}
+.footer p {
+  color: #f37121 !important;
+}
+.footer h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f37121;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+footer a {
+  color: #f37121 !important;
+}
+footer .text-center {
+  color: #f37121;
+}
+a.btn .btn-link {
+  text-decoration: none !important;
+}
+.signin,
+.signinC {
+  font-size: 1.3rem !important;
+}
+.wrapper .overlay {
+  position: absolute !important;
+  width: 170px !important;
+  height: 240px !important;
+  background: rgb(0, 0, 0) !important;
+  background: rgba(0, 0, 0, 0.5) !important; /* Black see-through */
+  color: #f1f1f1 !important;
+  width: 50px;
+  transition: 0.5s ease !important;
+  opacity: 0 !important;
+  color: white !important;
+  font-size: 20px !important;
+  padding: 20px !important;
+  text-align: center !important;
+}
+.wrapper:hover .overlay {
+  opacity: 1 !important;
+}
+.card.d-flex.flex-column.mt-3.mb-3.mr-3.ml-3:hover {
+  transform: scale(1.1) !important;
+  cursor: pointer !important;
+}
+.mOne:hover,
+.mTwo:hover {
+  cursor: pointer !important;
+}

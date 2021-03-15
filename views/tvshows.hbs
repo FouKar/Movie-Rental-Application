@@ -1,0 +1,21 @@
+<div class="container text-center mt-5 mb-5 d-flex flex-column justify-content-center" >
+  <div class="d-flex flex-row justify-content-center">
+       <a type="button" href="/tvshows/srtWtch" class="btn btn-outline-primary px-5 {{buttonOne}} text-white" style="border-radius: 0px !important; border-right: none !important">Most Watched</a>
+       <a type="button" href="/tvshows/srtRls" class="btn btn-outline-primary px-5 {{buttonTwo}} text-white" style="border-radius: 0px !important;">Release Date</a>
+       <a type="button" href="/tvshows/srtAdd" class="btn btn-outline-primary px-5 {{buttonThree}} text-white" style="border-radius: 0px !important; border-left: none !important">Recently Added</a>
+   </div>
+</div>
+<div class="container d-flex flex-column justify-content-center">
+<div class=" container d-flex flex-row flex-wrap justify-content-between">
+   
+    {{#each data}}
+    {{#if this.tv}}
+    <div class="col-3 mt-4 mb-3 d-flex flex-column align-items-center wrapper">
+     <a href="/tvDetails/{{this.id}}"><img src="{{this.smallPosterImg}}">
+     </a>
+     <h5 class="mt-2 text-center">{{this.title}}</h5>
+    </div>
+    {{/if}}
+   {{/each}}
+</div>
+</div>
