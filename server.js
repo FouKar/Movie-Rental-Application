@@ -302,5 +302,5 @@ app.use(express.static("./public"));
 app.use((req, res, next) => {
   res.status(404).send("Sorry, Page Not Found! Try another route.");
 });
-const HTTP_PORT = 5000;
+const HTTP_PORT = process.env.PORT || 5000;
 app.listen(HTTP_PORT, () => {});

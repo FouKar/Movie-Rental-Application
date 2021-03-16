@@ -14,9 +14,7 @@ body {
   font-size: large;
   padding-right: 40px !important;
 }
-.nav-item:hover {
-  transform: scale(1.5) !important;
-}
+
 .navbar-brand:hover {
   transform: scale(1.2) !important;
 }
