@@ -5,16 +5,16 @@
        <a type="button" href="/movies/srtAdd" class="btn btn-outline-primary px-5 text-light {{buttonThree}}" style="border-radius: 0px !important; border-left: none !important">Recently Added</a>
    </div>
 </div>
-<div class="container d-flex flex-column justify-content-center">
-<div class=" container d-flex flex-row flex-wrap justify-content-between">
+<div class="container d-flex flex-column align-items-around">
+<div class=" container d-flex flex-row flex-wrap justify-content-around">
    
     {{#each data}}
     {{#if this.mv}}
-    <div class="col-3 mt-4 mb-3 d-flex flex-column align-items-center wrapper">
-     <a href="/movieDetails/{{this.id}}"><img src="{{this.smallPosterImg}}">
+    <div class="mt-4 mb-3 d-flex flex-column align-items-center wrapper">
+     <a href="/movieDetails/{{this.id}}"><img src="{{this.smallPosterImg}}" width="180px">
      </a>
 
-     <h5 class="mt-2 text-center">{{this.title}}</h5>
+     <h5 class="mt-2 text-center" style="max-width: 180px;">{{this.title}}</h5>
     </div>
 
     {{/if}}

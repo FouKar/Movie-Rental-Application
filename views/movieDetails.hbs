@@ -23,16 +23,16 @@
     {{#if sim}}
 <div class="similar mb-5">
     <h3 class="text-center mt-5 mb-5">You May Also Like</h3>
-    <div class="container d-flex flex-column justify-content-center">
-<div class=" container d-flex flex-row flex-wrap justify-content-between">
+    <div class="container d-flex flex-column align-items-around flex-wrap">
+<div class=" container d-flex flex-row flex-wrap justify-content-around">
     {{/if}}
     {{#each sim}}
 
-     <div class="col-2 mt-4 mb-3 d-flex flex-column align-items-center wrapper">
-     <a href="/movieDetails/{{this.id}}"><img src="{{this.smallPosterImg}}">
+     <div class="mt-4 mb-3 d-flex flex-column align-items-center wrapper">
+     <a href="/movieDetails/{{this.id}}"><img src="{{this.smallPosterImg}}" width="180px">
      </a>
 
-     <h5 class="mt-2 text-center">{{this.title}}</h5>
+     <h5 class="mt-2 text-center " style="max-width: 180px;">{{this.title}}</h5>
     </div>
 
     {{/each}}
