@@ -518,14 +518,23 @@ module.exports.movie = {
     let arrMov = this.movieTv.filter((mov) => {
       return mov.featured && mov.mv;
     });
-    return arrMov.slice(0, 6);
+    if (arrMov.length >= 8) {
+      arrMov = arrMov.slice(0, 8);
+    } else if (arrMov.length < 8 && arrMov.length >= 4) {
+      arrMov = arrMov.slice(0, 4);
+    }
+    return arrMov;
   },
   featuredT(tv) {
     let arrTv = this.movieTv.filter((tv) => {
       return tv.featured && tv.tv;
     });
-
-    return arrTv.slice(0, 6);
+    if (arrTv.length >= 8) {
+      arrTv = arrTv.slice(0, 8);
+    } else if (arrTv.length < 8 && arrTv.length >= 4) {
+      arrTv = arrTv.slice(0, 4);
+    }
+    return arrTv;
   },
   featuredG(gn) {
     let arrGenre = [];
@@ -538,8 +547,10 @@ module.exports.movie = {
       }
       return;
     });
-    if (arrMov.length >= 6) {
-      arrMov = arrMov.slice(0, 6);
+    if (arrMov.length >= 8) {
+      arrMov = arrMov.slice(0, 8);
+    } else if (arrMov.length < 8 && arrMov.length >= 4) {
+      arrMov = arrMov.slice(0, 4);
     }
     return arrMov;
   },

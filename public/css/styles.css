@@ -77,3 +77,6 @@ a.btn .btn-link {
 .mTwo:hover {
   cursor: pointer !important;
 }
+.posterImg {
+  width: 300px !important;
+}

@@ -10,10 +10,10 @@
    
     {{#each data}}
     {{#if this.tv}}
-    <div class=" mt-4 mb-3 d-flex flex-column align-items-center wrapper">
-     <a href="/tvDetails/{{this.id}}"><img src="{{this.smallPosterImg}}" width="180px">
+    <div class=" mt-4 mb-3 d-flex flex-column col-xl-3 col-lg-4 col-md-12 align-items-center wrapper">
+     <a href="/tvDetails/{{this.id}}"><img src="{{this.smallPosterImg}}" class="posterImg">
      </a>
-     <h5 class="mt-2 text-center" style="max-width: 180px;">{{this.title}}</h5>
+     <h5 class="mt-2 text-center" style="max-width: 200px;">{{this.title}}</h5>
     </div>
     {{/if}}
    {{/each}}
