@@ -15,7 +15,8 @@ body {
   padding-right: 40px !important;
 }
 
-.navbar-brand:hover {
+.navbar-brand:hover,
+.nav-item:hover {
   transform: scale(1.2) !important;
 }
 .footer {
