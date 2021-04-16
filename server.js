@@ -125,7 +125,7 @@ app.post("/log", (req, res) => {
   });
   login
     .then(() => {
-      res.redirect("/movies");
+      res.render("dashboard");
     })
     .catch((inData) => {
       res.render("login", {
