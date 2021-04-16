@@ -81,7 +81,7 @@ module.exports.movie = {
       released: new Date("July 29, 2020").getTime(),
       added: new Date("December 20, 2020").getTime(),
       smallPosterImg: "/img/greenlandSmall.jpeg",
-      largePosterImg: "/img/greenl`andLarge.jpg",
+      largePosterImg: "/img/greenlandLarge.jpg",
       genre: ["Action", "Crime & Thrillers"],
       rating: "79%",
       featured: false,
