@@ -11,7 +11,12 @@
       <a class="nav-item nav-link" href="/movies">Movies</a>
       <a class="nav-item nav-link" href="/tvshows">TV Shows</a>
       <a class="nav-item nav-link mOne" data-target="#registerModal" data-toggle="modal">Register</a>
+     {{#if user}}
+      <a class="nav-item nav-link mThree" href="/User/dashboard">Dashboard</a>
+      <a class="nav-item nav-link mThree" href="/User/logout">Log Out</a>
+     {{else}}
       <a class="nav-item nav-link mTwo" data-target="#loginModal" data-toggle="modal">Log In</a>
+      {{/if}}
     </div>
   </div>
 </nav>
