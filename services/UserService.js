@@ -10,9 +10,7 @@ exports.logout = (req, res) => {
   req.session.destroy();
   res.redirect("/");
 };
-exports.getDashboard = (req, res, next) => {
-  res.render("User/dashboard.hbs");
-};
+
 exports.getAdminDashboard = (req, res, next) => {
   res.render("User/adminDashboard.hbs");
 };
@@ -60,11 +58,7 @@ exports.processLogin = (req, res) => {
           .then((isMatched) => {
             if (isMatched) {
               req.session.userInfo = user;
-              if (user.type === "Admin") {
-                res.redirect("/User/adminDashboard");
-              } else {
-                res.redirect("/User/dashboard");
-              }
+              res.redirect("/User/dashboard");
             } else {
               res.render("User/login", {
                 eMErr: "Email and/or password is incorrect",

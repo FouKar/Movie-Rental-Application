@@ -14,10 +14,5 @@ router.post("/reg", userFormValidation, userService.processUserFormData);
 router.get("/login", userService.getLoginView);
 router.get("/logout", userService.logout);
 router.post("/log", loginValidation, userService.processLogin);
-router.get(
-  "/dashboard",
-  loggedInUser,
-  dashboardLoader,
-  userService.getDashboard
-);
+router.get("/dashboard", loggedInUser, dashboardLoader);
 module.exports = router;
