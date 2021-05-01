@@ -15,4 +15,6 @@ router.get("/login", userService.getLoginView);
 router.get("/logout", userService.logout);
 router.post("/log", loginValidation, userService.processLogin);
 router.get("/dashboard", loggedInUser, dashboardLoader);
+router.get("/playlist", loggedInUser, userService.playlist);
+router.post("/addPlay", loggedInUser, userService.addPlay);
 module.exports = router;

@@ -16,6 +16,11 @@
         {{#if data.priceBuy}}
         <a class="btn btn-danger ml-2" href="/" style="background-color: #c70039 !important;" role="button">Buy ${{data.priceBuy}}</a>
         {{/if}}
+        {{#if user}}
+        <form action="/User/addPlay" method="post">
+            <button name="plist" type="submit" value={{data.id}} >Add to Playlist</button>
+        </form>
+        {{/if}}
         </div>
     </div>
      <div class="d-flex flex-column col-7 mt-5"></div>

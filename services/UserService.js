@@ -1,5 +1,7 @@
 const userModel = require("../model/User.js");
 const bcrypt = require("bcrypt");
+const movieDB = require("../model/movieDB.js");
+const mongoose = require("mongoose");
 exports.getRegistrationView = (req, res, next) => {
   res.render("User/register.hbs");
 };
@@ -70,4 +72,24 @@ exports.processLogin = (req, res) => {
       }
     })
     .catch((err) => console.log(`Error with login:${err}`));
+};
+exports.playlist = (req, res, next) => {
+  let movArr = [];
+  userModel.findById(req.session.userInfo._id).then((user) => {
+    user.playlist.forEach((id) => {
+      movArr.push(movieDB.movie.getAMovie(id));
+    });
+    res.render("User/playlist.hbs", {
+      data: movArr,
+    });
+  });
+};
+exports.addPlay = (req, res, next) => {
+  userModel
+    .findByIdAndUpdate(req.session.userInfo._id, {
+      $push: { playlist: req.body.plist },
+    })
+    .then(() => {
+      res.redirect("/User/playlist");
+    });
 };

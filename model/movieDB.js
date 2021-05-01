@@ -1,3 +1,19 @@
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
+const movieSchema = new Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  id: {
+    type: String,
+    required: true,
+  },
+  synopsis: {
+    type: String,
+    required: true,
+  },
+});
 module.exports.movie = {
   movieTv: [
     {

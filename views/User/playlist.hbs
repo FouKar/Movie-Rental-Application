@@ -1,0 +1,23 @@
+<div class="container text-center mt-5 mb-5 d-flex flex-column justify-content-center" >
+  <h2>{{user.firstName}} {{user.lastName}}'s Playlist</h2>
+</div>
+<div class="container d-flex flex-column align-items-around">
+<div class=" container d-flex flex-row flex-wrap justify-content-around">
+   
+    {{#each data}}
+    {{#if this.tv}}
+    <div class=" mt-4 mb-3 d-flex flex-column col-xl-3 col-lg-4 col-md-12 align-items-center wrapper">
+     <a href="/tvDetails/{{this.id}}"><img src="{{this.smallPosterImg}}" class="posterImg">
+     </a>
+     <h5 class="mt-2 text-center" style="max-width: 200px;">{{this.title}}</h5>
+    </div>
+    {{else}}
+    <div class="mt-4 mb-3 d-flex flex-column align-items-center wrapper col-xl-3 col-lg-4 col-md-12">
+     <a href="/movieDetails/{{this.id}}"><img src="{{this.smallPosterImg}}" class="posterImg">
+     </a>
+     <h5 class="mt-2 text-center" >{{this.title}}</h5>
+    </div>
+    {{/if}}
+   {{/each}}
+</div>
+</div>

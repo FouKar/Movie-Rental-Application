@@ -28,6 +28,9 @@ const userSchema = new Schema({
     type: String,
     default: "User",
   },
+  playlist: {
+    type: Array,
+  },
 });
 
 userSchema.pre("save", function (next) {
