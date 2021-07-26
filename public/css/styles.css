@@ -14,7 +14,9 @@ body {
   font-size: large;
   padding-right: 40px !important;
 }
-
+.navbar-collapse.collapse.show{
+text-align: center !important;
+}
 .navbar-brand:hover,
 .nav-item:hover {
   transform: scale(1.2) !important;
